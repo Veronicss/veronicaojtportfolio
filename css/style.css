@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center; 
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    }
+.navbar ul{
+    display: flex;
+    list-style: none;
+
+}
+.navbar ul li{
+    font-size: 1rem;
+  
+}
+.navbar::before{
+    content: "";
+    position: absolute;
+
+}
+.navbar ul li a{
+    padding: 5px 20px;
+    text-decoration: none;
+    color: orange;
+
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid blue;
+}
+
+
+html{
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    content: '';
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+.hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1ss;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: blue;
+    animation: text_reveal_box 3s ease;
+    animation-delay: .5s;
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid  white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+#hero .cta:hover{
+    color: white;
+    background-color: blue;
+}
+
+/*keyframes*/
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: whitesmoke;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width:768px){
+.cta{
+    font-size: 2.5rem;
+    padding: 20px 60px;
+}
+#portfolio h1{
+    font-size: 7rem;
+}
+/*hero*/
+#hero h1{
+    font-size: 7rem;
+}
+/*education*/
+#education h1{
+    font-size: 7rem;
+}
+#education .columns .box{
+    flex-basis: 15%;
+    margin: 2.5%;
+    flex-direction: row;
+}
+/*about me*/
+#about h1{
+    font-size: 7rem;
+}
+#about .about{
+    flex-direction: row;
+
+}
+#about .name h2{
+text-align: left;
+}
+}
+/*end ---- *?/
+/*contact*/
+#contact .contact{
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 20vh;
+
+}
+
+#contact .contact-item{
+    margin: 20px;
+
+}
+/*hero section*/
+#hero{
+    background-image: url(sun.JPG);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+#hero::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+   
+}
+
+
+.title h1{
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.info h1{
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20%;
+}
+
+.info h2{
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 23%;
+}
+
+#Home{
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+.heading {
+    border-bottom: 2px solid whitesmoke;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    transform: scale(1,1.3);
+}
+#Home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('sun.JPG') no-repeat center/cover;
+    height: 700px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+/* Portfolio*/
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: #000000dc;
+}
+#portfolio h1{
+    margin: 60px;
+
+}
+.gallery{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.gallery img{
+    width: 360px;
+    height: 500px;
+    padding: 10px;
+    margin: 10px;
+}
+.gallery img:hover{
+    background-color: white;
+    cursor: pointer;
+}
+/*Education*/
+#education{
+    display: flex;
+    flex-direction: column;
+    background-color: #000000dc;
+}
+#education h1{
+    margin: 60px;
+
+}
+.columns{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 50px;
+}
+.box{
+    height: 200px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+}
+.box h2{
+    color: orange;
+    font-size: 3rem;
+    margin-bottom: 40px;
+
+}
+.box p{
+    color: white;
+    font-size: 1.5rem;
+}
+/*about*/
+#about{
+    background-color: rgb(205, 173, 173);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+#about h1{
+    color: black;
+    margin: 55px;
+}
+.about{
+    display: flex;
+}
+.about img{
+    width: 500px;
+    height: 400px;
+    padding: 0px 30px;
+}
+.heading span{
+    color: crimson;
+}
+.name{
+    padding: 10px;
+}
+.name h2{
+    font-size: 2.5rem;
+    color: black;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.name p{
+    color: black;
+    font-size: 1.5rem;
+    text-indent: 50px;
+    line-height: 2.0;
+    text-align: justify;
+    margin-right: 20px;
+}
+/*Contact Me*/
+#contact{
+    display: flex;
+    flex-direction: column;
+}
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+#contact .contact-items{
+    width: 400px;
+}
+#contact .contact-item{
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px #0000002c;
+    transition: .3s ease box-shadow;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+#contact .contact-info h1{
+    font-size: 2rem;
+    font-weight: 550;
+    margin-bottom: 5px;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center;
+    margin-top: 55px;
+}
+.section-title span{
+    color: crimson;
+}
+#contact .contact-info h2{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 450;
+
+}
+/*footer*/
+#footer{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.brand h1{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+.brand h1 span{
+    color: crimson;
+}
+#footer h2{
+    text-align: center;
+    color:white;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#footer .social-item{
+    height: 50px;
+    width: 30px;
+    margin: 0 5px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+#footer p{
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+
+
